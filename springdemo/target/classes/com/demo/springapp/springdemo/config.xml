@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <bean name="DemoData" class="com.demo.springapp.springdemo.DemoData">
+    <property name="name"><value>Amit Kumar Singh</value> </property>
+        <property name="age"><value>28</value> </property>
+    
+    </bean>
+     
+</beans>

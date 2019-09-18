@@ -1,0 +1,4 @@
+1568548448302	Rename resource 'config.xml'
+1568550134986	Encapsulate field 'dao'
+1568550267258	Encapsulate field 'userService'
+1568568367523	Rename resource 'regResult.jsp'

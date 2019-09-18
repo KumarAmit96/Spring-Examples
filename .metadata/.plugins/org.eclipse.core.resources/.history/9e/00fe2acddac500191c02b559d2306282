@@ -1,0 +1,24 @@
+package com.demo.springapp.Spring_JDBC.employee.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.demo.springapp.Spring_JDBC.employee.dao.EmployeeDao;
+import com.demo.springapp.Spring_JDBC.employee.dto.Employee;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		
+		ApplicationContext context=new ClassPathXmlApplicationContext("com/demo/springapp/Spring_JDBC/employee/test/config.xml");
+		EmployeeDao emp=(EmployeeDao) context.getBean("EmployeeDaoImpl");
+		Employee em=new Employee();
+		em.setId(2);
+		em.setFirstname("Ashish");
+		em.setLastname("Singh");
+		int result=emp.create(em);
+		System.out.println("Number of rows inserted are"+result );
+	}
+
+}

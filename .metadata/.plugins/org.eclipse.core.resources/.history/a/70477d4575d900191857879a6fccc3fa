@@ -1,0 +1,15 @@
+package com.aop.spring.springaop.test;
+
+import com.aop.spring.springaop.ProductService;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/aop/spring/springaop/test/config.xml");
+		ProductService productservice = (ProductService) context.getBean("productService");
+		productservice.multiply(4, 5);
+
+	}
+
+}

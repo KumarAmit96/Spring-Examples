@@ -1,0 +1,28 @@
+package com.spring.mvcorm.user.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.mvcorm.user.dao.UserDao;
+import com.spring.mvcorm.user.entity.User;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserDao dao;
+
+	public UserDao getDao() {
+		return dao;
+	}
+
+	public void setDao(UserDao dao) {
+		this.dao = dao;
+	}
+
+	public int save(User user) {
+		// Bussiness Logic
+		return dao.create(user);
+	}
+
+}

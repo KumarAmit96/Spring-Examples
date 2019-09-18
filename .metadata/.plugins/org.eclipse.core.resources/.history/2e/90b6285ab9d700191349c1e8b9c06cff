@@ -1,0 +1,9 @@
+package com.spring.mvcorm.user.dao;
+
+import com.spring.mvcorm.user.entity.User;
+
+public interface UserDao {
+	
+	int create (User user);
+
+}
