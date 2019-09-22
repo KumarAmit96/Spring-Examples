@@ -4014,3 +4014,18 @@ Caused by: org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.jface.action.Action.runWithEvent(Action.java:476)
 	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
 	... 55 more
+
+!ENTRY org.eclipse.jdt.debug 2 0 2019-09-22 18:48:53.914
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2019-09-22 19:15:09.840
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2019-09-22 20:16:55.360
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.ui 4 4 2019-09-22 20:22:38.895
+!MESSAGE Plug-in 'org.eclipse.egit.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.search.menu' is invalid): org.eclipse.egit.ui.actions.OpenCommitSearchPage
+
+!ENTRY org.eclipse.jdt.debug 2 0 2019-09-22 21:22:55.317
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread

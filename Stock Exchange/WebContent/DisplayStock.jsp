@@ -41,7 +41,8 @@
 					+ Float.parseFloat(price) + "','" + share + "','" + time + "','" + id + "','"
 					+ Integer.parseInt(quantity) + "','" + type + "')";
 			int ii = st.executeUpdate(qwery);
-			if (ii > 0) {
+			if (ii > 0)
+			{
 				System.out.print("Data inserted....");
 
 				String sql = "select * from stock order by id";
@@ -96,7 +97,7 @@
 							try {
 								st = con.createStatement();
 								PreparedStatement ps;
-								int remain_stock, stock;
+								int remain_stock, stock,gg=0;
 								if (buylist.get(i).getStock_holding_uid() > salelist.get(j)
 										.getStock_holding_uid()) {
 									remain_stock = buylist.get(i).getStock_holding_uid()
@@ -111,6 +112,7 @@
 									if (update > 0) {
 
 										System.out.print("data deleted....from Transactional for seller");
+												gg=1;
 
 									} else {
 										System.out.print("No data deleted....from Transactional for seller");
@@ -123,9 +125,10 @@
 									ps = con.prepareStatement(up_stmt);
 									ps.setInt(1, remain_stock);
 									int count = ps.executeUpdate();
-									if (count > 1) {
+									if (count > 0) {
 										System.out.print("data updated....from Transactional for Buyer");
 										buylist.get(i).setStock_holding_uid(remain_stock);		
+										
 									} else {
 										System.out.print("data updated....from Transactional for Buyer");
 									}
@@ -143,6 +146,8 @@
 									int update = ps.executeUpdate();
 									if (update > 0) {
 										System.out.print("data deleted....from Transactional for buyer");
+										gg=2;
+
 									} else {
 										System.out.print("No data deleted....from Transactional for buyer");
 
@@ -153,7 +158,7 @@
 									ps = con.prepareStatement(up_stmt);
 									ps.setInt(1, remain_stock);
 									int count = ps.executeUpdate();
-									if (count > 1) {
+									if (count > 0) {
 										System.out.print("data updated....from Transactional for seller");
 										salelist.get(j).setStock_holding_uid(remain_stock);
 												
@@ -174,6 +179,16 @@
 
 								}
 								System.out.print("Connection closed...");
+								
+								/* if(gg==1)
+								{
+									salelist.remove(j);
+								}
+								else if(gg==2)
+								{
+									buylist.remove(i);
+								} */
+												
 
 							} catch (Exception e) {
 								System.out.print("Exception occured....");
@@ -194,6 +209,11 @@
 				System.out.print("Data not inserted....");
 				response.sendRedirect("BuyandSell.jsp");
 			}
+			
+			st.close();
+			con.close();
+			
+			
 		} catch (Exception e) {
 			out.println(e);
 		}

@@ -61,9 +61,7 @@
 			class="cancelbtn" id="save" onclick="btnSave()">
 	</div>
 	<div id="forms">
-		<form action="DisplayStock.jsp" method="post"
-			onSubmit="return dateCheck(this)">
-			<!--   -->
+		<form action="DisplayStock.jsp" method="post" onSubmit="return dateCheck(this)"> <!--  -->
 			<div class="container">
 				<p>Please fill the details.</p>
 				<hr>
@@ -176,7 +174,7 @@
 								con = DriverManager.getConnection(url + db, userName, password);
 								st = con.createStatement();
 								PreparedStatement ps;
-								int remain_stock, stock;
+								int remain_stock, stock,gg=0;
 								if (buylist.get(i).getStock_holding_uid() > salelist.get(j).getStock_holding_uid()) {
 									remain_stock = buylist.get(i).getStock_holding_uid()
 											- salelist.get(j).getStock_holding_uid();
@@ -189,6 +187,7 @@
 									int update = ps.executeUpdate();
 									if (update > 0) {
 										System.out.print("data deleted....from Transactional for seller");
+										gg=1;
 									} else {
 										System.out.print("No data deleted....from Transactional for seller");
 
@@ -220,6 +219,7 @@
 									int update = ps.executeUpdate();
 									if (update > 0) {
 										System.out.print("data deleted....from Transactional for buyer");
+												gg=2;
 									} else {
 										System.out.print("No data deleted....from Transactional for buyer");
 
@@ -249,9 +249,31 @@
 									System.out.print("No data inserted in stock holding....");
 
 								}
+								/* if(gg==1)
+								{
+									salelist.remove(j);
+								}
+								else if(gg==2)
+								{
+									buylist.remove(i);
+								} */
 								st.close();
 								con.close();
 								System.out.print("Connection closed...");
+								/* for (int jj = 0; jj < salelist.size() - 1; jj++) {
+									if (salelist.get(jj).getPrice() > salelist.get(jj + 1).getPrice()) {
+										temp = salelist.get(jj + 1);
+										temp2 = salelist.get(jj);
+										int k = salelist.indexOf(temp);
+										int l = salelist.indexOf(temp2);
+										salelist.remove(k);
+										salelist.remove(l);
+										salelist.add(l, temp);
+										salelist.add(k, temp2);
+
+									}
+								}
+ */
 
 							} catch (Exception e) {
 								System.out.print("Exception occured....");
