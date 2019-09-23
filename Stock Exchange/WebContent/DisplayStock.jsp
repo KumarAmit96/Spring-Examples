@@ -180,14 +180,16 @@
 								}
 								System.out.print("Connection closed...");
 								
-								/* if(gg==1)
+								if(gg==1)
 								{
 									salelist.remove(j);
+									j--;
 								}
 								else if(gg==2)
 								{
 									buylist.remove(i);
-								} */
+									i--;
+								} 
 												
 
 							} catch (Exception e) {

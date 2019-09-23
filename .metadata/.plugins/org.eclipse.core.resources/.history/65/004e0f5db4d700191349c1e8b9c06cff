@@ -1,5 +1,0 @@
-package com.spring.mvcorm.user.dao;
-
-public interface UserDao {
-
-}
