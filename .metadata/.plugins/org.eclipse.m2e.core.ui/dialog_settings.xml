@@ -29,6 +29,20 @@
 		<item value="15" key="y"/>
 		<item value="531" key="height"/>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Ajay_triffort\Desktop\Download\springbootjpa\springbootjpa"/>
+			<item value="C:\Users\Ajay_triffort\Desktop\Download\springboot\springboot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -42,6 +56,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="F:\Android\git\E-Commerce"/>
+			<item value="F:\StockMarket\git\spring-stocks"/>
 			<item value="F:\sprg\springaop\src\main\java\com\aop\spring\springaop\test\Test.java"/>
 			<item value="F:\sprg\SpringMVC"/>
 		</list>
@@ -56,27 +72,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.aop.spring.springjavaconfig"/>
-			<item value="com.aop.spring.springaop"/>
-			<item value="com.web.spring.Springmvcorm"/>
-			<item value="com.web.spring.SpringMVC"/>
-			<item value="com.demo.springapp.springorm"/>
-			<item value="com.demo.springapp.Spring_JDBC"/>
-			<item value="com.demo.springapp.springdemo"/>
+			<item value="com.ecommerce.site"/>
 		</list>
 		<list key="groupId">
-			<item value="com.aop.spring"/>
-			<item value="com.web.spring"/>
-			<item value="com.demo.springapp"/>
+			<item value="com.ecommerce.site"/>
 		</list>
 		<list key="artifactId">
-			<item value="springjavaconfig"/>
-			<item value="springaop"/>
-			<item value="Springmvcorm"/>
-			<item value="SpringMVC"/>
-			<item value="springorm"/>
-			<item value="Spring_JDBC"/>
-			<item value="springdemo"/>
+			<item value="ecommerce"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
