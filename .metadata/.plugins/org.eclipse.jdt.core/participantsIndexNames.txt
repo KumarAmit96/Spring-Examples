@@ -27,3 +27,5 @@ F:\sprg\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2136477664.index
 \Springmvcorm\src\main\java
 F:\sprg\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3243748267.index
 \Stock Exchange\src
+F:\sprg\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3314225965.index
+\ecommerce\src\main\java
